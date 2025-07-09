@@ -1,0 +1,74 @@
+{
+  "publisher": "Shishir G. Patil et al. / Gorilla Berkeley Function Calling Leaderboard",
+  "repository": "https://github.com/ShishirPatil/gorilla",
+  "commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "file": "BFCL_v4_live_parallel.json",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_live_parallel.json",
+      "bytes": 15649,
+      "sha256": "6c26e9fdc3350cf596e6d1ea9c179cbff834761bccf562f4141ed29a839ca421",
+      "retrieved_at": "2026-10-16T11:12:15.551410+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "tasks"
+    },
+    {
+      "file": "BFCL_v4_live_relevance.json",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_live_relevance.json",
+      "bytes": 47327,
+      "sha256": "e03f9e241657a137cba48a89ee12f47bf3fcb7e4f6274263e9c699a0c974203a",
+      "retrieved_at": "2026-10-16T11:12:16.108008+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "unused comparison; no matching answer file"
+    },
+    {
+      "file": "BFCL_v4_live_simple.json",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/BFCL_v4_live_simple.json",
+      "bytes": 260140,
+      "sha256": "1af2ac87dca47556db7b7e37e51e28b459a38b594e3c7b3c792b4903598ca0c4",
+      "retrieved_at": "2026-10-16T11:12:15.261805+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "tasks"
+    },
+    {
+      "file": "LICENSE",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "retrieved_at": "2026-10-16T11:12:14.928339+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "license"
+    },
+    {
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/README.md",
+      "bytes": 20277,
+      "sha256": "93119d83df28fee0a9f3ea41b0c6a947aad9f7ba4334ae89fef41c74b67b208d",
+      "retrieved_at": "2026-10-16T11:12:15.072531+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "source documentation"
+    },
+    {
+      "file": "answers-BFCL_v4_live_parallel.json",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_live_parallel.json",
+      "bytes": 4972,
+      "sha256": "8a9f189ff0e832ebbbbdade1fd95a7dbcc67406e9177df3f0aad76f59ab00350",
+      "retrieved_at": "2026-10-16T11:12:15.916336+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "reference answers"
+    },
+    {
+      "file": "answers-BFCL_v4_live_simple.json",
+      "url": "https://raw.githubusercontent.com/ShishirPatil/gorilla/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/bfcl_eval/data/possible_answer/BFCL_v4_live_simple.json",
+      "bytes": 46972,
+      "sha256": "fec9cfa9744a936f9126981e85a2023da1e63e273eafebc81923a1162fad70ce",
+      "retrieved_at": "2026-10-16T11:12:15.421149+00:00",
+      "retrieval_time_basis": "filesystem mtime of original successful bounded download",
+      "role": "reference answers"
+    }
+  ],
+  "known_missing": [
+    "possible_answer/BFCL_v4_live_relevance.json returned HTTP404; not used for scoring"
+  ]
+}

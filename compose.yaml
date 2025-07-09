@@ -1,0 +1,40 @@
+name: portfolio-release-2025-tracelab
+services:
+  app:
+    build:
+      context: .
+      args:
+        TRACELAB_UID: "${TRACELAB_UID:-501}"
+    image: portfolio-release-2025-tracelab:local
+    ports: ["127.0.0.1:${TRACELAB_PORT:-8285}:8000"]
+    environment:
+      TRACELAB_DB: /state/tracelab.sqlite
+      TRACELAB_TASKS: /tasks/tasks.json
+      TRACELAB_ORACLE: /oracle/answers.json
+      TRACELAB_BRIDGE: /bridge
+    volumes:
+      - tracelab-state:/state
+      - ./data/prepared:/tasks:ro
+      - ./data/oracle:/oracle:ro
+      - ./data/bridge:/bridge
+    networks: [tracelab]
+    read_only: true
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 48
+    mem_limit: 512m
+    cpus: 1.0
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+      start_period: 10s
+networks:
+  tracelab:
+    name: portfolio-release-2025-tracelab-network
+volumes:
+  tracelab-state:
+    name: portfolio-release-2025-tracelab-state

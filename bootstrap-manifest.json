@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "commands": [
+    {
+      "ready_file": "data/prepared/manifest.json",
+      "argv": [
+        "scripts/acquire.py"
+      ]
+    }
+  ],
+  "note": "Only declared public-publisher inputs/approved examples are included; MoneyVis transaction data are excluded."
+}

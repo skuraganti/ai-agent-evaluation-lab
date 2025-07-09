@@ -1,0 +1,12 @@
+# Decisions and experiments
+
+- **Choose planning depth over broad agent scaffolding.** BFCL pairs make argument alternatives, optional omission and parallel call multiplicity inspectable. WebArena/τ³ would add browser or stateful-user infrastructure. This app deliberately does not claim completed external tasks.
+- **Use local strict grading.** BFCL dialect normalization is explicit, references remain separated, and exact matching is explainable. Adopting the upstream checker would bring more runtime and semantics; local case/punctuation strictness must remain in every score claim.
+- **Compare policies on one approved alias.** Direct/guarded share model/limits, reducing one confound without new providers. The sample is too small and backend version unavailable to establish general superiority.
+- **Numeric schema baseline.** Generic extraction/defaults/abstention sets a reproducible low-cost baseline. No reference-key lookups or city tables. It is expected to fail many natural-language weather tasks; failures remain useful evidence.
+- **Pure simulated dispatch.** A valid plan gets a deterministic receipt rather than executing source tools. This isolates policy/validation/replay and eliminates arbitrary tool execution. Tool semantics/domain response accuracy are outside the benchmark.
+- **SQLite + serial thread rather than a broker.** Bounded experiments fit one process. Durable reservations and file IPC contain recovery complexity without Redis or cross-project services. All project state is independent.
+- **Fail closed on model recovery.** At most one inference attempt per identity. A lost response can waste a reserved attempt but cannot silently repeat spending. Offline replay always uses stored proposals.
+- **Reuse authoritatively and visibly.** Prior portfolio HTTP/IPC management utilities were independently adapted into this project's own source, not shared as mutable dependencies. BFCL is credited, and no upstream application is presented as original work.
+
+Observed pre-study fixes: independent review reproduced malformed-IPC crashes, empty-exception success mislabeling, terminal-file restart starvation and discarded failed-model latency. Root added bounded object decoders, range-before-finite checks, explicit failure state, nonfatal file cleanup/startup reconciliation, filtering before queue limit, dead-runner503 and retained attempted-call latency. Synthetic regression tests separate those fixes from live inference results. Any later engine corrections and affected reruns belong in VERIFICATION.md.

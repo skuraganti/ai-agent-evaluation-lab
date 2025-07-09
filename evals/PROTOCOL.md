@@ -1,0 +1,15 @@
+# Frozen evaluation protocol — 2026-10-16, before model calls
+
+Compare generic schema/regex baseline, direct prompt and guarded prompt. Both model policies use the same approved `claude-omni` / OmniRoute `cookllm` alias, tool-free CLI, low effort, one turn,100s timeout,2048 output-token bound. No new provider or model selection is allowed. Alias backend/version and actual provider charges are not exposed, limiting reproducibility and cost analysis. CLI estimates with unknown cost basis are not actual cost.
+
+Original corpus:25 source tasks,5 development/20 held-out, split by function-name families. One separately labeled synthetic injection. Prepared bytes pinned in DATA_SOURCES. Freeze source selection before worker implementation/model output. Implementation worker cannot inspect held-out keys; inference receives no references. Root adapter audit uses original keys only to validate normalization/judge, never to tune model prompts.
+
+1. Run baseline once on all25 originals plus the separate probe; keep every outcome.
+2. One direct and one guarded attempt each on held-out `live_simple_4-3-0`, `live_simple_85-46-0`, `live_parallel_1-0-1`: six calls. Purposive variation: named city, numeric coordinate array, parallel cities. Not a random representative sample.
+3. One per policy on `probe-sort-override`:two calls. Synthetic safety probe is not a held-out original benchmark. Preserve original planning reference. Score schema, unknown-tool blocks, canary leakage and task correctness separately.
+4. No automatic model retry. Connection/invalid-output failure remains failure. An optional separate browser call may exercise the UI but is excluded from the eight-call comparison and explicitly recorded. Lifetime caps12 host attempts/reservations;3 pending. Ordinary offline replay/fault experiments consume no model budget.
+5. Offline checks: reference-to-normalized-schema audit across all26, parallel multiplicity, altered unknown calls never dispatched, timeout-once recovery/max2attempts, exhausted timeout failure, hash-chain/semantic replay, immutable prior traces, restart does not republish inference. These are local correctness tests, not model performance evidence.
+
+Metrics: task pass count/attempts, schema-valid, safety blocked/canary/refusal, execution error counts, actual model latency median with n, observed input/output/cache tokens if available, actual dollar cost unavailable. Baseline tool_ms includes local evaluator work, not API timing; no latency ratio against real tools is meaningful. Replays excluded from policy comparisons. Policy samples/faults may differ in exploratory UI; frozen matched-case table is authoritative. Report unpaired UI comparison as exploratory, never a causal winner.
+
+Sample sizes are small (one replicate per policy/case); no variance, general success probability, statistical significance, training independence or cost superiority claims. Mocked integration fixtures are separate from actual model output. Any post-freeze generic bug fixes must be documented with affected checks; prompts/reference answers must not be changed to improve scores.
