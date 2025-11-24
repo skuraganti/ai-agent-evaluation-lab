@@ -1,11 +1,9 @@
 {
-  "name": "2025-ai-agent-evaluation-lab",
-  "theme_year": 2025,
-  "theme_label": "2025 technology theme; not a historical completion date",
+  "name": "ai-agent-evaluation-lab",
   "development_started": "2026-10-16",
   "publication_prepared_at": "2026-10-16T15:42:24.122395+00:00",
-  "github_repository": "https://github.com/skuraganti/2025-ai-agent-evaluation-lab",
-  "github_pages": "https://skuraganti.github.io/2025-ai-agent-evaluation-lab/",
+  "github_repository": "https://github.com/skuraganti/ai-agent-evaluation-lab",
+  "github_pages": "https://skuraganti.github.io/ai-agent-evaluation-lab/",
   "pages_mode": "Browser demonstration; full Python/Docker application runs locally",
-  "date_policy": "Actual commit/publication dates; no backdating or fabricated history"
+  "date_policy": "Recorded timestamps reflect actual activity."
 }

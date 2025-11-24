@@ -2740,7 +2740,5 @@
   ],
   "source_url": "https://github.com/ShishirPatil/gorilla/tree/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard",
   "limit": "Local derived planning score, not official BFCL or actual weather fulfillment. No model/API calls on Pages; actual costs unavailable.",
-  "theme_year": 2025,
-  "developed_at": "2026-10-16",
-  "repository": "https://github.com/skuraganti/2025-ai-agent-evaluation-lab"
+  "repository": "https://github.com/skuraganti/ai-agent-evaluation-lab"
 }

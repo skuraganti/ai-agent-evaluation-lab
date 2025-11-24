@@ -1,6 +1,6 @@
 # TraceLab development and publication plan
 
-Theme2025; actual development/publication preparation2026-10-16. The full application is independent, useful and locally runnable. Reproducible BFCL-derived tool-planning comparisons, immutable traces, local reference grading, replay, synthetic faults and prompt-injection checks.
+Actual development/publication preparation2026-10-16. The full application is independent, useful and locally runnable. Reproducible BFCL-derived tool-planning comparisons, immutable traces, local reference grading, replay, synthetic faults and prompt-injection checks.
 
 Completed original milestones: define user/workflow/non-goals; compare real-data candidates; pin sources/licenses; scoped Claude implementation; lead integration and corrections; native/Docker/browser/persistence checks; record actual results and limitations. Public release adds a separate static browser demo, reviewed examples, reproducible bootstrap, portable configuration and publication checks before an initial commit.
 

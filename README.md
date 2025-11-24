@@ -1,10 +1,8 @@
 # TraceLab — ai agent evaluation lab
 
-**[Open the GitHub Pages browser demo](https://skuraganti.github.io/2025-ai-agent-evaluation-lab/)** · [Architecture](ARCHITECTURE.md) · [Data sources](DATA_SOURCES.md) · [Verification](VERIFICATION.md)
+**[Open the GitHub Pages browser demo](https://skuraganti.github.io/ai-agent-evaluation-lab/)** · [Architecture](ARCHITECTURE.md) · [Data sources](DATA_SOURCES.md) · [Verification](VERIFICATION.md)
 
 Reproducible BFCL-derived tool-planning comparisons, immutable traces, local reference grading, replay, synthetic faults and prompt-injection checks.
-
-**Theme year: 2025. Actual development: 2026-10-16.** The2020–2026portfolio timeline describes technology themes and increasing sophistication, not historical completion dates. Commits and publication use their actual dates. See [project.json](project.json).
 
 ## Two ways to explore
 
@@ -40,8 +38,8 @@ Tool receipts/faults are simulated, and upstream live filenames refer to histori
 
 [DEMO.md](DEMO.md) describes a local walkthrough; [docs/DEMO.md](docs/DEMO.md) describes the Pages interactions. [DECISIONS.md](DECISIONS.md), [PLAN.md](PLAN.md) and [SOURCE_MANIFEST.json](SOURCE_MANIFEST.json) record engineering choices and source versions. All original implementation was developed with Claude Code through the approved connection and ChatGPT architecture, integration, review, correction and independent verification. Upstream components and original data publishers are credited in [UPSTREAM.md](UPSTREAM.md); third-party licenses remain in force. No additional license grant for the original implementation has been selected.
 
-## Portfolio themes
+## Explore projects
 
-[2020](https://skuraganti.github.io/2020-personal-spending-tracker/) · [2021](https://skuraganti.github.io/2021-live-earth-dashboard/) · [2022](https://skuraganti.github.io/2022-data-pipeline-monitor/) · [2023](https://skuraganti.github.io/2023-private-ai-knowledge-engine/) · [2024](https://skuraganti.github.io/2024-ai-codebase-explorer/) · [2025](https://skuraganti.github.io/2025-ai-agent-evaluation-lab/) · [2026](https://skuraganti.github.io/2026-ai-incident-investigator/)
+[Ledger](https://skuraganti.github.io/personal-spending-tracker/) · [Fieldglass](https://skuraganti.github.io/live-earth-dashboard/) · [Relay](https://skuraganti.github.io/data-pipeline-monitor/) · [Folio](https://skuraganti.github.io/private-ai-knowledge-engine/) · [Contour](https://skuraganti.github.io/ai-codebase-explorer/) · [TraceLab](https://skuraganti.github.io/ai-agent-evaluation-lab/) · [Faultline](https://skuraganti.github.io/ai-incident-investigator/)
 
 Prerequisites: a POSIX host (macOS or Linux), Docker with Compose, and `uv`. Native scripts use POSIX process/file-lock facilities. Dependency installation needs internet; Relay, Folio and TraceLab also download original-source data during bootstrap. Defaults work without copying `.env.example`. Optional model integration uses a locally configured host bridge; inference may be remote. The supplied bridge requires `zsh`, an existing `claude-omni` command and the approved `cookllm` route; no provider is included or enabled by Pages.
