@@ -2,7 +2,7 @@
 
 Compare generic schema/regex baseline, direct prompt and guarded prompt. Both model policies use the same approved `claude-omni` / OmniRoute `cookllm` alias, tool-free CLI, low effort, one turn,100s timeout,2048 output-token bound. No new provider or model selection is allowed. Alias backend/version and actual provider charges are not exposed, limiting reproducibility and cost analysis. CLI estimates with unknown cost basis are not actual cost.
 
-Original corpus:25 source tasks,5 development/20 held-out, split by function-name families. One separately labeled synthetic injection. Prepared bytes pinned in DATA_SOURCES. Freeze source selection before worker implementation/model output. Implementation worker cannot inspect held-out keys; inference receives no references. Root adapter audit uses original keys only to validate normalization/judge, never to tune model prompts.
+Original corpus:25 source tasks,5 development/20 held-out, split by function-name families. One separately labeled synthetic injection. Prepared bytes pinned in DATA_SOURCES. Source selection was frozen before the evaluator implementation task and model output. Reference answers and evaluation keys were excluded from the implementation task context and inference payloads; the separate reference-key audit validates judge normalization, not model prompts.
 
 1. Run baseline once on all25 originals plus the separate probe; keep every outcome.
 2. One direct and one guarded attempt each on held-out `live_simple_4-3-0`, `live_simple_85-46-0`, `live_parallel_1-0-1`: six calls. Purposive variation: named city, numeric coordinate array, parallel cities. Not a random representative sample.

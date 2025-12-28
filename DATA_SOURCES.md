@@ -33,7 +33,7 @@ Selection indices are explicit in `scripts/acquire.py` and prepared manifest:5 d
 
 Every selected task preserves original `id`, exact function descriptions/parameters, and all message content with visible original role labels inside untrusted prompt text. Embedded roles never become host/system instructions. Regex screen refuses email-shaped text and credential/card field names in selected records; human inspection also selected public city/coordinate/arithmetic tasks. This bounded screen and upstream redaction are not a global privacy guarantee for the unused raw corpus. No private candidate context is imported.
 
-Prepared `tasks.json` SHA256 `24f2fcf16fa75f6a9296e02d1cf394f2a0029b7ad62b487e23152a410fe40cfb`; separate `answers.json` SHA256 `4061ffac0ee6946cefd3d19fa6c31a8be776b9c027ecd5ec07286be0c7ee1e37`. Runtime pins both. Model bridge reads only the first, verifies its fingerprint and reconstructs payload by ID. Implementation worker was forbidden raw/oracle/prepared/evaluation keys. Answers reach only the local judge and post-run inspector.
+Prepared `tasks.json` SHA256 `24f2fcf16fa75f6a9296e02d1cf394f2a0029b7ad62b487e23152a410fe40cfb`; separate `answers.json` SHA256 `4061ffac0ee6946cefd3d19fa6c31a8be776b9c027ecd5ec07286be0c7ee1e37`. Runtime pins both. Model bridge reads only the first, verifies its fingerprint and reconstructs payload by ID. Reference answers and evaluation keys were excluded from the implementation task context and inference payloads. Answers reach only the local judge and post-run inspector.
 
 ## Local scoring and synthetic material
 

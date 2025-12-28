@@ -1,9 +1,8 @@
 # TraceLab engine contract, frozen 2026-10-16
 
-Owner: Claude Code through the verified Mac `claude-omni` / `cookllm` route.
-Permitted writes: **app/evaluator.py and tests/test_evaluator.py only**. The lead owns all other files. You are not alone in this directory; accommodate other edits and never revert them. Do not read data/raw, data/oracle, data/prepared, evals, or any predecessor project. The oracle is withheld from implementation and from inference.
+`app/evaluator.py` implements the bounded deterministic tool-planning evaluator; `tests/test_evaluator.py` checks its behavior with independent synthetic fixtures. Reference answers and evaluation keys were excluded from the implementation task context and inference payloads. The oracle reaches only the local judge and replay validation.
 
-Read this contract, selected Karpathy and ECC eval-harness/security guidance. Implement a useful, bounded, deterministic tool-planning evaluator. No network, shell execution, real tools, Git, models, dependency installation, or new agents in this engine. Use jsonschema already installed. Return a short factual handoff with exact tests run.
+The engine uses jsonschema for local schema validation. It performs no network requests, shell execution, real tool calls or model inference. Source-provided functions and scripts are never executed.
 
 ## Public functions
 
@@ -31,4 +30,4 @@ Events: `{seq,type,at,payload,prev_hash,hash}`, hash = digest of all fields exce
 
 ## Required meaningful tests
 
-Use original small synthetic fixtures (not evaluation keys). Alternative values/omission, nullable option, bool vs number, strict casing, parallel permutation + duplicate multiplicity, unknown tools/args, duplicate JSON keys, invalid/deep/nonfinite output, $ref refusal, no mutation, canary blocking, once/exhausted fault traces, replay match, trace/payload/task tamper refusal, baseline generic numeric array/sum and abstention. Tests and ruff must run in existing .venv. Do not expand to other files.
+Use original small synthetic fixtures (not evaluation keys). Alternative values/omission, nullable option, bool vs number, strict casing, parallel permutation + duplicate multiplicity, unknown tools/args, duplicate JSON keys, invalid/deep/nonfinite output, $ref refusal, no mutation, canary blocking, once/exhausted fault traces, replay match, trace/payload/task tamper refusal, baseline generic numeric array/sum and abstention. Run tests and ruff in the project's own environment.
