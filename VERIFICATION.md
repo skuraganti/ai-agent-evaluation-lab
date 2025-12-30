@@ -1,6 +1,6 @@
 # Release verification — 2026-10-16
 
-Actual development and release preparation 2026-10-16. This report records checks on the sanitized public source copy before its initial commit. Deployment is checked separately after pushing, without backdated commits. Passing these bounded checks does not guarantee every future feed, model response or workload.
+Actual development and release preparation 2026-10-16. This report distinguishes initial release preparation from the maintenance checks below. Deployment is checked separately after publication. Passing these bounded checks does not guarantee every future feed, model response or workload.
 
 | Check | Observed result |
 |---|---|
@@ -44,3 +44,15 @@ sh stack.sh up
 Local URL: http://127.0.0.1:8285. The container limit is 512 MiB for the app, plus Docker and host process overhead. Tested one portfolio stack at a time on an ARM Mac with 8 GiB host RAM and a 2 GiB Docker VM. No GPU. Defaults use independent named volumes and localhost bindings. Stack stop retains state; no unrelated services are managed.
 
 For Pages: `python3 -m http.server 8008 --bind 127.0.0.1 --directory docs`. With optional agent-browser 0.38.1 installed, run `sh scripts/check-pages.sh`; assertions are in `tests/pages-smoke.js`. No browser automation package is shipped to Pages.
+
+## Maintenance: repeated offline baseline and replay
+
+The bounded baseline protocol was frozen before its cloud measurements, then independently accepted before the formal local run. [The complete recorded local report](examples/baseline-repeat-v1.json) retains 25 original cases × 3 repetitions (5 development / 20 held-out), three separate synthetic-probe evaluations and nine separate numeric fault checks: **87 evaluations**, with **0 application-model calls**. The unchanged baseline gave **3/25 successes, 20 refusals, 2 wrong-call outcomes** in each repetition; development 2/5, held-out 1/20. Every proposal/outcome/receipt/semantic hash was stable. All outcomes remain visible. These previously observed cases establish deterministic reproducibility, not 75 independent tasks, model variance, general accuracy or a policy winner.
+
+An independent check recomputed every recorded row's proposal/outcome hashes, rejudged all 28 distinct task/fault combinations against pinned local references and compared all 87 rows, and recomputed split counts and timing statistics. The three original-case timing medians were 0.791, 0.795, 0.789 ms on Python 3.14.8 / ARM macOS; these measure local simulated validation/judging, not tool/API latency. The public report records exact protocol, runner, source, package/lock/runtime hashes and actual measurement times; dollars remain null.
+
+**43 native tests passed**, including 8 new harness regressions; `uv run ruff check .` passed. Tests separately check fresh invocations, known metrics, timing-independent semantic stability, drift refusal, bounds, output exclusivity and no network dispatch. A TestClient deprecation warning remains. The formal report's runner and protocol pins match the accepted bytes. No application/evaluator/source/oracle/bridge/dependency/cap change was made.
+
+An isolated Docker build/start/health check used the real pinned numeric task with an explicit synthetic once-only timeout. API idempotency returned the same batch. API replay and a browser **Replay offline** action created two distinct parent-linked runs, verified saved-chain/semantic matches and left the original unchanged. The trace displayed two local attempts around a labeled synthetic fault. All three saved rows, full state and export survived container restart exactly; reserved/pending model counts stayed 0. A deep-copy payload edit was rejected as an event hash mismatch. The verification stack was stopped with its volume retained. These backend checks are distinct from the Pages site's saved-fixture equality check.
+
+Use [the protocol and command](evals/BASELINE_REPEAT_PROTOCOL.md) and [trace replay walkthrough](docs/TRACE_REPLAY.md) to reproduce. No original eight-call model study was rerun. The static Pages application and saved fixture are unchanged.

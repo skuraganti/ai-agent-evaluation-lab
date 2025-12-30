@@ -1,0 +1,3144 @@
+{
+  "protocol_id": "tracelab-baseline-repeat-v1",
+  "protocol_sha256": "64f19271673e2903b9e1ee5e3038a013d016e0becd8698c788a8a5f69b1166e9",
+  "runner_sha256": "9c8e1ddc424609908fe064721f1f2824159679a638522e984b273438aae5aaf1",
+  "source": {
+    "repository": "https://github.com/ShishirPatil/gorilla",
+    "commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "manifest_sha256": "21e0c83b3ed56cf087740142bbf7da238d3143dbc7459f496115fdde5b1436ce",
+    "raw_files_sha256": {
+      "BFCL_v4_live_parallel.json": "6c26e9fdc3350cf596e6d1ea9c179cbff834761bccf562f4141ed29a839ca421",
+      "BFCL_v4_live_relevance.json": "e03f9e241657a137cba48a89ee12f47bf3fcb7e4f6274263e9c699a0c974203a",
+      "BFCL_v4_live_simple.json": "1af2ac87dca47556db7b7e37e51e28b459a38b594e3c7b3c792b4903598ca0c4",
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "README.md": "93119d83df28fee0a9f3ea41b0c6a947aad9f7ba4334ae89fef41c74b67b208d",
+      "answers-BFCL_v4_live_parallel.json": "8a9f189ff0e832ebbbbdade1fd95a7dbcc67406e9177df3f0aad76f59ab00350",
+      "answers-BFCL_v4_live_simple.json": "fec9cfa9744a936f9126981e85a2023da1e63e273eafebc81923a1162fad70ce"
+    },
+    "tasks_sha256": "24f2fcf16fa75f6a9296e02d1cf394f2a0029b7ad62b487e23152a410fe40cfb",
+    "reference_sha256": "4061ffac0ee6946cefd3d19fa6c31a8be776b9c027ecd5ec07286be0c7ee1e37"
+  },
+  "code_sha256": {
+    "app/catalog.py": "9582cfc709e58a9a14c0dd9f8c523b5cae106e85303558b8d21f21e0f5ecf6be",
+    "app/evaluator.py": "877b72ecef2bd8910ff851ff155865a4fbd7a0edfd8dc478cbfccbce6c2e229d"
+  },
+  "seed": 17,
+  "policy": "baseline",
+  "planned_evaluations": 87,
+  "started_at_utc": "2026-10-16T22:01:46.899264+00:00",
+  "finished_at_utc": "2026-10-16T22:01:47.053753+00:00",
+  "runtime": {
+    "python": "3.14.8",
+    "implementation": "CPython",
+    "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+    "uv_lock_sha256": "5c1ec4b2efb8a937ec3fc6a4e14ef91de004e651d203e2f11d5842fa68390f41",
+    "packages_sha256": "aa182b8f0767a15867cb11f5cb7a118e8a11271ae4a979110bb61953bc11a105",
+    "jsonschema": "4.26.0"
+  },
+  "status": "stable",
+  "design": {
+    "cases": 25,
+    "development": 5,
+    "held_out": 20,
+    "repetitions": 3,
+    "original_evaluations": 75,
+    "note": "25 fixed, previously observed cases x 3 deterministic repetitions; not independent tasks. n stays 25."
+  },
+  "model_calls": 0,
+  "cost_usd": null,
+  "tool_ms_basis": "local simulated tool validation/judging; not API latency",
+  "not_compared": [
+    "trace_hash",
+    "event timestamps",
+    "tool_ms"
+  ],
+  "raw_report_sha256": "7a0e10aefc68fa6dd4d5794a8b21da804dd8da99275d65231ffbb753ccea96e9",
+  "originals": {
+    "stable_cases": [
+      "live_simple_86-47-0",
+      "live_simple_102-61-0",
+      "live_simple_103-61-1",
+      "live_simple_104-61-2",
+      "live_simple_115-71-0",
+      "live_simple_4-3-0",
+      "live_simple_5-3-1",
+      "live_simple_6-3-2",
+      "live_simple_7-3-3",
+      "live_simple_39-16-0",
+      "live_simple_77-38-0",
+      "live_simple_85-46-0",
+      "live_simple_90-51-0",
+      "live_simple_98-58-0",
+      "live_simple_118-74-0",
+      "live_simple_120-76-0",
+      "live_simple_192-116-0",
+      "live_simple_193-116-1",
+      "live_simple_194-116-2",
+      "live_simple_195-116-3",
+      "live_parallel_1-0-1",
+      "live_parallel_5-2-0",
+      "live_parallel_6-3-0",
+      "live_parallel_7-3-1",
+      "live_parallel_13-9-0"
+    ],
+    "unstable_cases": [],
+    "per_repetition": [
+      {
+        "repetition": 1,
+        "all": {
+          "n": 25,
+          "task_success": 3,
+          "schema_valid": 25,
+          "safe": 25,
+          "refusal": 20,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 3,
+            "refusal": 20,
+            "wrong_calls": 2
+          },
+          "tool_ms_local": {
+            "min": 0.632,
+            "median": 0.791,
+            "max": 1.542
+          }
+        },
+        "development": {
+          "n": 5,
+          "task_success": 2,
+          "schema_valid": 5,
+          "safe": 5,
+          "refusal": 2,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 2,
+            "refusal": 2,
+            "wrong_calls": 1
+          },
+          "tool_ms_local": {
+            "min": 0.711,
+            "median": 1.438,
+            "max": 1.542
+          }
+        },
+        "held_out": {
+          "n": 20,
+          "task_success": 1,
+          "schema_valid": 20,
+          "safe": 20,
+          "refusal": 18,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 1,
+            "refusal": 18,
+            "wrong_calls": 1
+          },
+          "tool_ms_local": {
+            "min": 0.632,
+            "median": 0.7555000000000001,
+            "max": 1.318
+          }
+        }
+      },
+      {
+        "repetition": 2,
+        "all": {
+          "n": 25,
+          "task_success": 3,
+          "schema_valid": 25,
+          "safe": 25,
+          "refusal": 20,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 3,
+            "refusal": 20,
+            "wrong_calls": 2
+          },
+          "tool_ms_local": {
+            "min": 0.629,
+            "median": 0.795,
+            "max": 1.515
+          }
+        },
+        "development": {
+          "n": 5,
+          "task_success": 2,
+          "schema_valid": 5,
+          "safe": 5,
+          "refusal": 2,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 2,
+            "refusal": 2,
+            "wrong_calls": 1
+          },
+          "tool_ms_local": {
+            "min": 0.734,
+            "median": 1.429,
+            "max": 1.515
+          }
+        },
+        "held_out": {
+          "n": 20,
+          "task_success": 1,
+          "schema_valid": 20,
+          "safe": 20,
+          "refusal": 18,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 1,
+            "refusal": 18,
+            "wrong_calls": 1
+          },
+          "tool_ms_local": {
+            "min": 0.629,
+            "median": 0.728,
+            "max": 1.252
+          }
+        }
+      },
+      {
+        "repetition": 3,
+        "all": {
+          "n": 25,
+          "task_success": 3,
+          "schema_valid": 25,
+          "safe": 25,
+          "refusal": 20,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 3,
+            "refusal": 20,
+            "wrong_calls": 2
+          },
+          "tool_ms_local": {
+            "min": 0.631,
+            "median": 0.789,
+            "max": 1.519
+          }
+        },
+        "development": {
+          "n": 5,
+          "task_success": 2,
+          "schema_valid": 5,
+          "safe": 5,
+          "refusal": 2,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 2,
+            "refusal": 2,
+            "wrong_calls": 1
+          },
+          "tool_ms_local": {
+            "min": 0.696,
+            "median": 1.432,
+            "max": 1.519
+          }
+        },
+        "held_out": {
+          "n": 20,
+          "task_success": 1,
+          "schema_valid": 20,
+          "safe": 20,
+          "refusal": 18,
+          "blocked_call_entries": 0,
+          "exceptions": 0,
+          "failure_class": {
+            "none": 1,
+            "refusal": 18,
+            "wrong_calls": 1
+          },
+          "tool_ms_local": {
+            "min": 0.631,
+            "median": 0.7285,
+            "max": 1.238
+          }
+        }
+      }
+    ],
+    "rows": [
+      {
+        "repetition": 1,
+        "split": "development",
+        "task_id": "live_simple_86-47-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "c82553524decd9b70ad0179766b1ca35bebc74a1b76cba172a5766a14d082b37",
+        "trace_hash": "dd353c0057864472ac942ab6aa6c8ba0ac30eb48926ac3df1dcc1c07a4d5aff6",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.295
+      },
+      {
+        "repetition": 1,
+        "split": "development",
+        "task_id": "live_simple_102-61-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0df01a2cf1f3aba8a571009f1d0195f5c6fb53361de022f318f9c438c3fc4c2e",
+        "trace_hash": "7007d8cb81ff2458db8ac44a7e7246d130263b2505005aa364d8fde308aedbec",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.541
+      },
+      {
+        "repetition": 1,
+        "split": "development",
+        "task_id": "live_simple_103-61-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "wrong_calls",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "calculate_tax",
+              "arguments": {
+                "apply_special_tax": false,
+                "city": null,
+                "county": null,
+                "discount_rate": 0.0,
+                "purchase_amount": 999,
+                "state": "m not sure how much tax I need to pay. What",
+                "tax_exempt": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "0a1724f6ba3ab87ae5858c790878b3e277421fae74fd23cd32b2ff949dc841ad",
+        "outcome_sha256": "0538c0356d16bc19c416f488b15f21ba8bf1ccbd41b4827fab82b5903f002165",
+        "receipt_sha256": "0df58eda255abd0a3307f9082ea8154278d6c1c92e160bcf5f3630f3d0ce29e8",
+        "semantic_hash": "ef6292fbdde4f939d2aded9a5246385755adb69f9e63c465f15915ab76e6fc5b",
+        "trace_hash": "cac7a92c20c84f9a09b0210292604e197bba29ad8be08cc055f5219640a64155",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.542
+      },
+      {
+        "repetition": 1,
+        "split": "development",
+        "task_id": "live_simple_104-61-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "142112ac1dd178a806e1780407536647c35ee1b4f3d36147623f2237054d55c3",
+        "trace_hash": "bda4fd87b4442bde0f5577f9a363fbc3cf062b165f44ef0ea88bb9287607cbb7",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.438
+      },
+      {
+        "repetition": 1,
+        "split": "development",
+        "task_id": "live_simple_115-71-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "calculate_sum",
+              "arguments": {
+                "number1": 133,
+                "number2": 34
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "1e0b3422fce66bd1676de18acda105357e55b31def9c842dcfd29e8684700a65",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "bcb9e9aa04b61b9a435f8b60fc9e58a7db180bff3d10eca870df31122725f3c1",
+        "semantic_hash": "5f8097e2ebafef93fa4ee6433a568f77f97af5fe25b693ee2b509ca5eaf3fa20",
+        "trace_hash": "ec6d136b661d2673ad55dd37f0ecf0b69cf94a98147866065a78f704d17d69e9",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.711
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_4-3-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "452a90793db93832e27c0d16022ef055ac84334bd3497131285ae6fabc42bccf",
+        "trace_hash": "9cf20c3b5d49536331049d0e9a80530733f1133c6c117858f761c59617ba473b",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.723
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_5-3-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "8077b7969879bfa83fcac679f9b7ca2e262ec873c11b386307be1ee25082c792",
+        "trace_hash": "af4963ddc9faef9952099aabe2863319b788b25778567b3eeb13ef51d0a461a5",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.652
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_6-3-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d2a703d091e099975eb9d791317556d0ec4f12b1127cd4cffe8f582ab241f6f2",
+        "trace_hash": "e4b3bf5a009d0f5055cb7fb71c99da8a624382f28359b76c8a2d85da57e30d85",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.667
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_7-3-3",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "676359bbcf3ec95a128574db1599e3fc3f675d5c995d8250498e59240d6a7f3e",
+        "trace_hash": "f6f3760afcadcd4a96cd6ad0950f75e06b03cdc67b2dd09abcd58742c7fb5fd3",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.642
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_39-16-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "wrong_calls",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "fetch_weather_data",
+              "arguments": {
+                "language": "en",
+                "latitude": 10,
+                "longitude": 37.8651,
+                "units": "metric",
+                "url": "https://api.open-meteo.com/v1/forecast"
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "d5c9d75df6cf4218f245ec143dc9e464cc60a921a2b4f2d96c68b74862005b6b",
+        "outcome_sha256": "0538c0356d16bc19c416f488b15f21ba8bf1ccbd41b4827fab82b5903f002165",
+        "receipt_sha256": "6e4fe663a5e881c56da069f71cac7835177ef57cc60002d81128e77c041aea0e",
+        "semantic_hash": "4c1cd13878039b10a8bbc45f9e0d299c7044af92b598aec32028d772d659cb01",
+        "trace_hash": "f5ab583edd009170789d0f0593cc052ec6eda0c3052328c433e182f1dd0ad4c1",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.203
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_77-38-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0e2175d0f8d381a308923dda61ee6df4c4d4023fcff6a37c28b8bab02e59a949",
+        "trace_hash": "b7a633195c82c3ffec0ec3f03c15dc74c93e0bbc7999342cd9af6738e196ea81",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.953
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_85-46-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "open_meteo_api.fetch_weather_data",
+              "arguments": {
+                "coordinates": [
+                  37.8715,
+                  -122.273
+                ],
+                "units": "Celsius"
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "c9994db14846e6645202d630a4ce489e4a78f7f72d3a167f0685df84844bf08f",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "1e372df635e1f55d755f2dc19eea0b632ece423c00320ddabcb63f225c0ecdcd",
+        "semantic_hash": "ce8dc1716683a005eadcb4b580151a2b337cd4aaa5fa6c8f3d1ebc756aa6d08a",
+        "trace_hash": "559f2a56d2e306f8d19c40957ec46227bf6367e0e33db1c0d597de6d94c4577a",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.867
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_90-51-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "ac299aaf1798aacb105622cee6ef408a176520b6fe580a368e67e01c41f71f33",
+        "trace_hash": "5528735ec0e0f38dd77f2692ca5d6fe8fb42aa523d679cb76f69a22e751ce9a5",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.836
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_98-58-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "42906d574ebbdd5651da6ca0d5bbba6561bd2dcba05776c94efd3f4f08c7bbc8",
+        "trace_hash": "221049263a56cd510a1f39735e6f9c789d07bd518f853e6a5f8f6a1d439d443f",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.791
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_118-74-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "dd0e1766e563b5f6096c53a3f76a12f1ef81ae633b925f5dfd42a75914470f28",
+        "trace_hash": "563bb6fa4f28ac07316eb362eb102152b878a6292c8c5b3beead5b7e6a570096",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.88
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_120-76-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0a0feecf814d32d8269792f2f94b1e98bf090eafb5244b9f1c7b8b4a48042af1",
+        "trace_hash": "ae354c15e5f78e734380217f9fb116334bbe74c2860353c809032e039ea934ec",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.318
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_192-116-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d93811b6ab9894bb8a417ae01a7b9114ada043219973ee4caa5560146856f5cb",
+        "trace_hash": "6f94c3cbab44c16d35f388e2e8f0c7ad677a337faf2913001b5daa7c244914c4",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.647
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_193-116-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "de014014554c7910573fca423e0b7b1a4f35a7a360e573725f34610d91841643",
+        "trace_hash": "954a82f52826ff32c84a4490b82a9cc7bf7f39000b0dc7400a6401545eddee49",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.633
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_194-116-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "7fae84158fa9b757ebf39f2b9399372d29f7b5109103069cee972684d1fa1fda",
+        "trace_hash": "7dd7cd3725adfb8a1b4bb8b9f7f0e3783dfe72281ff4dba960aa200c9caa347b",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.632
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_simple_195-116-3",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "df835f72e6ce6c407474262ec56d677a4fe3608559abb0968831aea6cea87f17",
+        "trace_hash": "148161d0f0921babaa77c33285095469417110374dfe29e42e2499fa8935bdfd",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.634
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_parallel_1-0-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "97b4791406fab9112cb961f8026d92860f857e7554f65aa1b7def5862fdbef93",
+        "trace_hash": "e313b24b4f23d0c141a7890cee4514cbcdabfc59245eb73d100ad0cf6265e683",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.648
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_parallel_5-2-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "9317ccad3c6e1e8c8a7cc909ec8d44fbd4dad9368cc1c29042f4090582ab0963",
+        "trace_hash": "980529d1b2a80b5d99ea2e7a35c55f412697cec748fddaeec54987318e384419",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.788
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_parallel_6-3-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "cannot infer a unique tool"
+        },
+        "proposal_sha256": "388ce0263a0b0528ef8c2d0c25c1c557e382080c69ffb6b5712da610ec33ed9d",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "523e75b189aa87925a91939df7f14c2fccadf5fc2b6fca814a04040e53d2b8b7",
+        "trace_hash": "3943010145781ddb81ac1ff7a50756cd73645ec2321402d3758074aa6c6ab1f4",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.245
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_parallel_7-3-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "cannot infer a unique tool"
+        },
+        "proposal_sha256": "388ce0263a0b0528ef8c2d0c25c1c557e382080c69ffb6b5712da610ec33ed9d",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d63ca10f398464560f9b716c17d2179dd06802adf309e7d3614689d48729c1b6",
+        "trace_hash": "c410bd0b296c7c2de614d164cf809a25cf30890f099ed77e36a3ddb650c4faf3",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.229
+      },
+      {
+        "repetition": 1,
+        "split": "held_out",
+        "task_id": "live_parallel_13-9-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "3b9637f32af6b87dc216b8e08a4371942866cb4a42fa8b4c5b677d8f007a4d72",
+        "trace_hash": "3f98e97d5d9fe09a9918437381b6e0df5f6a5e327ea7f1715f5390005348ee8e",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.639
+      },
+      {
+        "repetition": 2,
+        "split": "development",
+        "task_id": "live_simple_86-47-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "c82553524decd9b70ad0179766b1ca35bebc74a1b76cba172a5766a14d082b37",
+        "trace_hash": "1453f48d1d97bd1b9934de47805ae9ecd2cc2ee4b8398d81ce90195e13d0df6f",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.879
+      },
+      {
+        "repetition": 2,
+        "split": "development",
+        "task_id": "live_simple_102-61-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0df01a2cf1f3aba8a571009f1d0195f5c6fb53361de022f318f9c438c3fc4c2e",
+        "trace_hash": "4221345a3eb09a1f4824a0181882834826cc48c43a1b8779e8bf231722bd9b94",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.429
+      },
+      {
+        "repetition": 2,
+        "split": "development",
+        "task_id": "live_simple_103-61-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "wrong_calls",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "calculate_tax",
+              "arguments": {
+                "apply_special_tax": false,
+                "city": null,
+                "county": null,
+                "discount_rate": 0.0,
+                "purchase_amount": 999,
+                "state": "m not sure how much tax I need to pay. What",
+                "tax_exempt": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "0a1724f6ba3ab87ae5858c790878b3e277421fae74fd23cd32b2ff949dc841ad",
+        "outcome_sha256": "0538c0356d16bc19c416f488b15f21ba8bf1ccbd41b4827fab82b5903f002165",
+        "receipt_sha256": "0df58eda255abd0a3307f9082ea8154278d6c1c92e160bcf5f3630f3d0ce29e8",
+        "semantic_hash": "ef6292fbdde4f939d2aded9a5246385755adb69f9e63c465f15915ab76e6fc5b",
+        "trace_hash": "cfd04f939c1ac29b4be61afe42f0b9545eca278e57e65827b39b0a5a7b7b7785",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.515
+      },
+      {
+        "repetition": 2,
+        "split": "development",
+        "task_id": "live_simple_104-61-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "142112ac1dd178a806e1780407536647c35ee1b4f3d36147623f2237054d55c3",
+        "trace_hash": "f4e48ae2ccbcfa21c4a3d13a759b104c5acd84239975dadb494abf003292ee0e",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.431
+      },
+      {
+        "repetition": 2,
+        "split": "development",
+        "task_id": "live_simple_115-71-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "calculate_sum",
+              "arguments": {
+                "number1": 133,
+                "number2": 34
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "1e0b3422fce66bd1676de18acda105357e55b31def9c842dcfd29e8684700a65",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "bcb9e9aa04b61b9a435f8b60fc9e58a7db180bff3d10eca870df31122725f3c1",
+        "semantic_hash": "5f8097e2ebafef93fa4ee6433a568f77f97af5fe25b693ee2b509ca5eaf3fa20",
+        "trace_hash": "5b0b27f288228827d3f3bfa36822e62f043d81399692bda408bc8e675efdb2cb",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.734
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_4-3-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "452a90793db93832e27c0d16022ef055ac84334bd3497131285ae6fabc42bccf",
+        "trace_hash": "b0f548856c6f93fb5637821f93f9f5db99d89d8df7079f30b3aa5a9120967169",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.646
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_5-3-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "8077b7969879bfa83fcac679f9b7ca2e262ec873c11b386307be1ee25082c792",
+        "trace_hash": "dc1e8eee74ce0bcdf1befc7e600f2a7fd2dd9d03154af069ae84c9a41cb621b3",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.646
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_6-3-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d2a703d091e099975eb9d791317556d0ec4f12b1127cd4cffe8f582ab241f6f2",
+        "trace_hash": "bb6552a845f28497b76dea2b440c05393d4ff9e1fd7b12b9a86f2942a2a98551",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.642
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_7-3-3",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "676359bbcf3ec95a128574db1599e3fc3f675d5c995d8250498e59240d6a7f3e",
+        "trace_hash": "15915d0b765d15ac827f50b244f55d2b178f88a9e8a5d963f38d0a4bbcf217d2",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.642
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_39-16-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "wrong_calls",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "fetch_weather_data",
+              "arguments": {
+                "language": "en",
+                "latitude": 10,
+                "longitude": 37.8651,
+                "units": "metric",
+                "url": "https://api.open-meteo.com/v1/forecast"
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "d5c9d75df6cf4218f245ec143dc9e464cc60a921a2b4f2d96c68b74862005b6b",
+        "outcome_sha256": "0538c0356d16bc19c416f488b15f21ba8bf1ccbd41b4827fab82b5903f002165",
+        "receipt_sha256": "6e4fe663a5e881c56da069f71cac7835177ef57cc60002d81128e77c041aea0e",
+        "semantic_hash": "4c1cd13878039b10a8bbc45f9e0d299c7044af92b598aec32028d772d659cb01",
+        "trace_hash": "6123756f57fd07013e1beba95a3d4f9bb6906b3bd7aa41aed19896a271f9a943",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.162
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_77-38-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0e2175d0f8d381a308923dda61ee6df4c4d4023fcff6a37c28b8bab02e59a949",
+        "trace_hash": "2d640592a53e4071b41cc3eaf4a76b8fdf0d8d3ce0aec2fd1f4497a558305891",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.984
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_85-46-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "open_meteo_api.fetch_weather_data",
+              "arguments": {
+                "coordinates": [
+                  37.8715,
+                  -122.273
+                ],
+                "units": "Celsius"
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "c9994db14846e6645202d630a4ce489e4a78f7f72d3a167f0685df84844bf08f",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "1e372df635e1f55d755f2dc19eea0b632ece423c00320ddabcb63f225c0ecdcd",
+        "semantic_hash": "ce8dc1716683a005eadcb4b580151a2b337cd4aaa5fa6c8f3d1ebc756aa6d08a",
+        "trace_hash": "7b299417ef34c5457f28396d07a6e021c8a15396788c2fce9159465f46452382",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.877
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_90-51-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "ac299aaf1798aacb105622cee6ef408a176520b6fe580a368e67e01c41f71f33",
+        "trace_hash": "323278e2addafc5a4768bb87cff812c3cf82f39bf834ceff064d3aba6e593123",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.841
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_98-58-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "42906d574ebbdd5651da6ca0d5bbba6561bd2dcba05776c94efd3f4f08c7bbc8",
+        "trace_hash": "ab96f039130e75fc4383ba341aec15ed7863a4b58d606966a46d1cd3e1524e75",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.773
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_118-74-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "dd0e1766e563b5f6096c53a3f76a12f1ef81ae633b925f5dfd42a75914470f28",
+        "trace_hash": "2d4c5e96f570ea5937b04d877a49604a77e5178f30a3a55ef11f4351530d1fdd",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.932
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_120-76-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0a0feecf814d32d8269792f2f94b1e98bf090eafb5244b9f1c7b8b4a48042af1",
+        "trace_hash": "b130210126839ce3da1b1f4a72da46b6eb57ce003131f251775c5bd7829e21e9",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.252
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_192-116-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d93811b6ab9894bb8a417ae01a7b9114ada043219973ee4caa5560146856f5cb",
+        "trace_hash": "f7daae9182e493cc5bb70ab2cab318f40100e6a974fa6816b81f2fc8bc725196",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.631
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_193-116-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "de014014554c7910573fca423e0b7b1a4f35a7a360e573725f34610d91841643",
+        "trace_hash": "b9a65481862e8d7f7503af8a4c3dafe2d75265645fc0fa8fe00c895c063400b1",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.632
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_194-116-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "7fae84158fa9b757ebf39f2b9399372d29f7b5109103069cee972684d1fa1fda",
+        "trace_hash": "ff3094c34944f25b31906ed18ee766601c61c3dcbe23eb9e33ecd46975b64452",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.629
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_simple_195-116-3",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "df835f72e6ce6c407474262ec56d677a4fe3608559abb0968831aea6cea87f17",
+        "trace_hash": "6dfc56b5eee8f66e400b242bddf17031c49a0d8a6bf0215632c3cd21eda3f978",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.683
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_parallel_1-0-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "97b4791406fab9112cb961f8026d92860f857e7554f65aa1b7def5862fdbef93",
+        "trace_hash": "762b1e7adec3cf17e53711492c55047c61d3aba145565c6f6795af9473ee1a27",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.654
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_parallel_5-2-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "9317ccad3c6e1e8c8a7cc909ec8d44fbd4dad9368cc1c29042f4090582ab0963",
+        "trace_hash": "e09c79aafd6a977da110ae894585fcdbfffc568113dce8b838dbb757a36f5366",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.795
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_parallel_6-3-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "cannot infer a unique tool"
+        },
+        "proposal_sha256": "388ce0263a0b0528ef8c2d0c25c1c557e382080c69ffb6b5712da610ec33ed9d",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "523e75b189aa87925a91939df7f14c2fccadf5fc2b6fca814a04040e53d2b8b7",
+        "trace_hash": "ecb731b7c9a5d23c750700799a1ed226903d9b9eacf6b2d7c1f36b1035adadab",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.231
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_parallel_7-3-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "cannot infer a unique tool"
+        },
+        "proposal_sha256": "388ce0263a0b0528ef8c2d0c25c1c557e382080c69ffb6b5712da610ec33ed9d",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d63ca10f398464560f9b716c17d2179dd06802adf309e7d3614689d48729c1b6",
+        "trace_hash": "0eefa632bca3a6407c49ac610d84cc0fec44e769130299596e455fef8b636bb1",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.236
+      },
+      {
+        "repetition": 2,
+        "split": "held_out",
+        "task_id": "live_parallel_13-9-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "3b9637f32af6b87dc216b8e08a4371942866cb4a42fa8b4c5b677d8f007a4d72",
+        "trace_hash": "115a93bc9b367ba3e97c7a9ee86bff96679beada5800f6f75d09304020b60378",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.647
+      },
+      {
+        "repetition": 3,
+        "split": "development",
+        "task_id": "live_simple_86-47-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "c82553524decd9b70ad0179766b1ca35bebc74a1b76cba172a5766a14d082b37",
+        "trace_hash": "f13aa88f50893fde3513f55ff132db2f171409df65c4fce8c799b206137d5238",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.846
+      },
+      {
+        "repetition": 3,
+        "split": "development",
+        "task_id": "live_simple_102-61-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0df01a2cf1f3aba8a571009f1d0195f5c6fb53361de022f318f9c438c3fc4c2e",
+        "trace_hash": "ed12771c6864364fbd4c64617f229aaa947d7b25d79a575731aa790a72a86dda",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.435
+      },
+      {
+        "repetition": 3,
+        "split": "development",
+        "task_id": "live_simple_103-61-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "wrong_calls",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "calculate_tax",
+              "arguments": {
+                "apply_special_tax": false,
+                "city": null,
+                "county": null,
+                "discount_rate": 0.0,
+                "purchase_amount": 999,
+                "state": "m not sure how much tax I need to pay. What",
+                "tax_exempt": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "0a1724f6ba3ab87ae5858c790878b3e277421fae74fd23cd32b2ff949dc841ad",
+        "outcome_sha256": "0538c0356d16bc19c416f488b15f21ba8bf1ccbd41b4827fab82b5903f002165",
+        "receipt_sha256": "0df58eda255abd0a3307f9082ea8154278d6c1c92e160bcf5f3630f3d0ce29e8",
+        "semantic_hash": "ef6292fbdde4f939d2aded9a5246385755adb69f9e63c465f15915ab76e6fc5b",
+        "trace_hash": "8af63183b5b50063db30cb05db308d19c949373f1c83a5b43018c74e5b00ac29",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.519
+      },
+      {
+        "repetition": 3,
+        "split": "development",
+        "task_id": "live_simple_104-61-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "142112ac1dd178a806e1780407536647c35ee1b4f3d36147623f2237054d55c3",
+        "trace_hash": "956cc470f6f2c2da5387489e645db374ba6490510b3c0fee29775af0f6547d52",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.432
+      },
+      {
+        "repetition": 3,
+        "split": "development",
+        "task_id": "live_simple_115-71-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "calculate_sum",
+              "arguments": {
+                "number1": 133,
+                "number2": 34
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "1e0b3422fce66bd1676de18acda105357e55b31def9c842dcfd29e8684700a65",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "bcb9e9aa04b61b9a435f8b60fc9e58a7db180bff3d10eca870df31122725f3c1",
+        "semantic_hash": "5f8097e2ebafef93fa4ee6433a568f77f97af5fe25b693ee2b509ca5eaf3fa20",
+        "trace_hash": "9178eed416f36f2d59938074bc3cdff645a341a2d2ef3515c10736206b2c256d",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.696
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_4-3-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "452a90793db93832e27c0d16022ef055ac84334bd3497131285ae6fabc42bccf",
+        "trace_hash": "1c81d6ee726c828fef6a3c1ec6fd0924fb497a284c4da5b110fab05a95e2cedb",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.644
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_5-3-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "8077b7969879bfa83fcac679f9b7ca2e262ec873c11b386307be1ee25082c792",
+        "trace_hash": "9c39a603c2326e6a367c9fc792cf148a63ad657039c3fabb2c3f003fc826287f",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.654
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_6-3-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d2a703d091e099975eb9d791317556d0ec4f12b1127cd4cffe8f582ab241f6f2",
+        "trace_hash": "60f6409f9e819a990cbbec244cf6e4897d4dd8366d7f423bff935b1c87b752f6",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.672
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_7-3-3",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "676359bbcf3ec95a128574db1599e3fc3f675d5c995d8250498e59240d6a7f3e",
+        "trace_hash": "cc131275ec7dfc7f7b71a2696d78e70b6c590a44676589adcb759c3e6945734f",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.642
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_39-16-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "wrong_calls",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "fetch_weather_data",
+              "arguments": {
+                "language": "en",
+                "latitude": 10,
+                "longitude": 37.8651,
+                "units": "metric",
+                "url": "https://api.open-meteo.com/v1/forecast"
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "d5c9d75df6cf4218f245ec143dc9e464cc60a921a2b4f2d96c68b74862005b6b",
+        "outcome_sha256": "0538c0356d16bc19c416f488b15f21ba8bf1ccbd41b4827fab82b5903f002165",
+        "receipt_sha256": "6e4fe663a5e881c56da069f71cac7835177ef57cc60002d81128e77c041aea0e",
+        "semantic_hash": "4c1cd13878039b10a8bbc45f9e0d299c7044af92b598aec32028d772d659cb01",
+        "trace_hash": "d2259c025cfae727b88554b03aae89d570a32190d954ac8599dbdd7e8c6e28bc",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 1.176
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_77-38-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0e2175d0f8d381a308923dda61ee6df4c4d4023fcff6a37c28b8bab02e59a949",
+        "trace_hash": "f596ca4d22d447c4823af987f8ccaa6c7b5215a1fdbc767b7100146e48b54f9e",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.967
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_85-46-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "open_meteo_api.fetch_weather_data",
+              "arguments": {
+                "coordinates": [
+                  37.8715,
+                  -122.273
+                ],
+                "units": "Celsius"
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "c9994db14846e6645202d630a4ce489e4a78f7f72d3a167f0685df84844bf08f",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "1e372df635e1f55d755f2dc19eea0b632ece423c00320ddabcb63f225c0ecdcd",
+        "semantic_hash": "ce8dc1716683a005eadcb4b580151a2b337cd4aaa5fa6c8f3d1ebc756aa6d08a",
+        "trace_hash": "278310a1b3a2a4c6546ee07bce0898f8867a60cf70cfa24ba511fdcadb0927d7",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.881
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_90-51-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "ac299aaf1798aacb105622cee6ef408a176520b6fe580a368e67e01c41f71f33",
+        "trace_hash": "14bafd54e153c4d86844bb4c0f155a8b67fa3c10fb61045b5c827f958eaeab98",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.826
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_98-58-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "42906d574ebbdd5651da6ca0d5bbba6561bd2dcba05776c94efd3f4f08c7bbc8",
+        "trace_hash": "aa07c8665e3b3b85279538aef3bfa0876ffee9339e47ff5901be016484611482",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.789
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_118-74-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "dd0e1766e563b5f6096c53a3f76a12f1ef81ae633b925f5dfd42a75914470f28",
+        "trace_hash": "f9cbe354e10223bf4e79351dab53646755d302d2e79294925e8450737cfcaffd",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.86
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_120-76-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "0a0feecf814d32d8269792f2f94b1e98bf090eafb5244b9f1c7b8b4a48042af1",
+        "trace_hash": "928b7eedb5f2865976cf0839c22b0de6c9857f5542c1525488fab5957bae765a",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.238
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_192-116-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d93811b6ab9894bb8a417ae01a7b9114ada043219973ee4caa5560146856f5cb",
+        "trace_hash": "06f1e7dfce3a84ec3f522f4f488e818cd0d903850059b9c47bcdefc636db6408",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.638
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_193-116-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "de014014554c7910573fca423e0b7b1a4f35a7a360e573725f34610d91841643",
+        "trace_hash": "894dca1c18ddb34d8700ff7a427518b25824067c6cb18f1bd1b187bb29c63fba",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.631
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_194-116-2",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "7fae84158fa9b757ebf39f2b9399372d29f7b5109103069cee972684d1fa1fda",
+        "trace_hash": "c776f9473e0eac88e68c0ff236764e8590502e0d27fb67d46dcdc4beca6f9005",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.641
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_simple_195-116-3",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "df835f72e6ce6c407474262ec56d677a4fe3608559abb0968831aea6cea87f17",
+        "trace_hash": "522ed4473674b943f8ef496f79d954fec74614fc56789637c37b915f8dd49030",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.632
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_parallel_1-0-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "97b4791406fab9112cb961f8026d92860f857e7554f65aa1b7def5862fdbef93",
+        "trace_hash": "c8b2d666c2a528617b1ec972b2f7b84fb1427351efbd6fec1e10d5e77b8edf12",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.644
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_parallel_5-2-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "9317ccad3c6e1e8c8a7cc909ec8d44fbd4dad9368cc1c29042f4090582ab0963",
+        "trace_hash": "fcf45b5cedff38a94e78d4c01efc2f11fe3b1ff5d5c1d23d6c19f104cd9e202d",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.785
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_parallel_6-3-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "cannot infer a unique tool"
+        },
+        "proposal_sha256": "388ce0263a0b0528ef8c2d0c25c1c557e382080c69ffb6b5712da610ec33ed9d",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "523e75b189aa87925a91939df7f14c2fccadf5fc2b6fca814a04040e53d2b8b7",
+        "trace_hash": "4f20016ac059ee0e7acd0657d1edcec04c11f66bae48c5fdf1423966cbf537df",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.228
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_parallel_7-3-1",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "cannot infer a unique tool"
+        },
+        "proposal_sha256": "388ce0263a0b0528ef8c2d0c25c1c557e382080c69ffb6b5712da610ec33ed9d",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "d63ca10f398464560f9b716c17d2179dd06802adf309e7d3614689d48729c1b6",
+        "trace_hash": "9377dd60edab4f1507a3df0892d4faf7112cbcb9c9a880873ad175b704f70da9",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 1.226
+      },
+      {
+        "repetition": 3,
+        "split": "held_out",
+        "task_id": "live_parallel_13-9-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": true,
+        "failure_class": "refusal",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [],
+          "abstain": true,
+          "reason": "required arguments cannot be inferred"
+        },
+        "proposal_sha256": "85be5cf4f3673a0608e65ecd921956bd29d51f669f0bf0a15310dd7e16530bd3",
+        "outcome_sha256": "acb6273f959e4e1854cf12089cbd0269eee3bbe33cd514e172192fa1194cc21e",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "3b9637f32af6b87dc216b8e08a4371942866cb4a42fa8b4c5b677d8f007a4d72",
+        "trace_hash": "296de81d1150fd2048adb03d2f992128f93eb2c347adc69ce145dfd9e9bcf15e",
+        "receipts": 0,
+        "max_attempts_per_call": 0,
+        "synthetic_faults": 0,
+        "tool_ms": 0.639
+      }
+    ]
+  },
+  "probe": {
+    "separate_from_originals": true,
+    "stable": [
+      "probe-sort-override"
+    ],
+    "unstable": [],
+    "per_repetition": [
+      {
+        "n": 1,
+        "task_success": 1,
+        "schema_valid": 1,
+        "safe": 1,
+        "refusal": 0,
+        "blocked_call_entries": 0,
+        "exceptions": 0,
+        "failure_class": {
+          "none": 1
+        },
+        "tool_ms_local": {
+          "min": 0.928,
+          "median": 0.928,
+          "max": 0.928
+        }
+      },
+      {
+        "n": 1,
+        "task_success": 1,
+        "schema_valid": 1,
+        "safe": 1,
+        "refusal": 0,
+        "blocked_call_entries": 0,
+        "exceptions": 0,
+        "failure_class": {
+          "none": 1
+        },
+        "tool_ms_local": {
+          "min": 0.985,
+          "median": 0.985,
+          "max": 0.985
+        }
+      },
+      {
+        "n": 1,
+        "task_success": 1,
+        "schema_valid": 1,
+        "safe": 1,
+        "refusal": 0,
+        "blocked_call_entries": 0,
+        "exceptions": 0,
+        "failure_class": {
+          "none": 1
+        },
+        "tool_ms_local": {
+          "min": 0.953,
+          "median": 0.953,
+          "max": 0.953
+        }
+      }
+    ],
+    "rows": [
+      {
+        "repetition": 1,
+        "task_id": "probe-sort-override",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "5ca3ee0dab385be56c546d0ac7190da81cf23e9db29cb943b5638df5dd752685",
+        "trace_hash": "3fcf5ee198960802a9ea3b768d5c3da1583815e83a03e69f2ab9abc4a16c1773",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.928
+      },
+      {
+        "repetition": 2,
+        "task_id": "probe-sort-override",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "5ca3ee0dab385be56c546d0ac7190da81cf23e9db29cb943b5638df5dd752685",
+        "trace_hash": "c3bb30e4df90aaa2ee645ede0fa4301a7f8f3a61dbf66a270aea6de387da0d58",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.985
+      },
+      {
+        "repetition": 3,
+        "task_id": "probe-sort-override",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "5ca3ee0dab385be56c546d0ac7190da81cf23e9db29cb943b5638df5dd752685",
+        "trace_hash": "ac6dcba05659dd090cecb9a33b28a6142ccb3c544c391834d63e27524c658578",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.953
+      }
+    ]
+  },
+  "fault_experiment": {
+    "task_id": "live_simple_86-47-0",
+    "synchronous_simulation": true,
+    "stable_faults": [
+      "none",
+      "timeout_once",
+      "always_timeout"
+    ],
+    "unstable_faults": [],
+    "attempt_bound_violations": 0,
+    "rows": [
+      {
+        "repetition": 1,
+        "task_id": "live_simple_86-47-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "c82553524decd9b70ad0179766b1ca35bebc74a1b76cba172a5766a14d082b37",
+        "trace_hash": "79e2389f88d2a86b8f8b69e35f6360f1783293a4f032d4beae41940e43a2bf9f",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.878
+      },
+      {
+        "repetition": 1,
+        "task_id": "live_simple_86-47-0",
+        "fault": "timeout_once",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "ab0ec41b6b144325e7360aa9b65e362a9eb92ed1da40a5b1229f5449e8f92513",
+        "trace_hash": "ed3d8a93e21a1aa17e6878aedcdbf719edc34f539faab8b5d6e25a89d5161cee",
+        "receipts": 1,
+        "max_attempts_per_call": 2,
+        "synthetic_faults": 1,
+        "tool_ms": 0.876
+      },
+      {
+        "repetition": 1,
+        "task_id": "live_simple_86-47-0",
+        "fault": "always_timeout",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "injected_failure",
+        "blocked_calls": [],
+        "error": "synthetic timeout exhausted retries",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "061c7f35c73edc1c89c9ae38e3b5b5eca5e718c9efb03599c75c4a13b1097222",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "2b921d42f73fb5de649526ab879e7e3a6e6a694fbe0125fa10cbc6c0c158e334",
+        "trace_hash": "41a5ec942f12a1587c09d890df8caaccd5d69b2f84e5decbc480f042f3036dea",
+        "receipts": 0,
+        "max_attempts_per_call": 2,
+        "synthetic_faults": 2,
+        "tool_ms": 0.87
+      },
+      {
+        "repetition": 2,
+        "task_id": "live_simple_86-47-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "c82553524decd9b70ad0179766b1ca35bebc74a1b76cba172a5766a14d082b37",
+        "trace_hash": "d31a27aa89ec1e3925727b98a0658733081c85296ef22add2b81bf1eeb5d1519",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.927
+      },
+      {
+        "repetition": 2,
+        "task_id": "live_simple_86-47-0",
+        "fault": "timeout_once",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "ab0ec41b6b144325e7360aa9b65e362a9eb92ed1da40a5b1229f5449e8f92513",
+        "trace_hash": "bffe3d28e709d1ad28b7958d2e13868d64de1d1ec7af7d816d9368259ce2a2a5",
+        "receipts": 1,
+        "max_attempts_per_call": 2,
+        "synthetic_faults": 1,
+        "tool_ms": 0.903
+      },
+      {
+        "repetition": 2,
+        "task_id": "live_simple_86-47-0",
+        "fault": "always_timeout",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "injected_failure",
+        "blocked_calls": [],
+        "error": "synthetic timeout exhausted retries",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "061c7f35c73edc1c89c9ae38e3b5b5eca5e718c9efb03599c75c4a13b1097222",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "2b921d42f73fb5de649526ab879e7e3a6e6a694fbe0125fa10cbc6c0c158e334",
+        "trace_hash": "51d6dfb385a8723adcec5ddca55d33f2f89d86443f8fa418a27c2f482bfd2ebf",
+        "receipts": 0,
+        "max_attempts_per_call": 2,
+        "synthetic_faults": 2,
+        "tool_ms": 0.857
+      },
+      {
+        "repetition": 3,
+        "task_id": "live_simple_86-47-0",
+        "fault": "none",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "c82553524decd9b70ad0179766b1ca35bebc74a1b76cba172a5766a14d082b37",
+        "trace_hash": "765981fcccce99b7d3805f9427645af9a6f08db6af57e2586e9c3f3b3bb7f0bc",
+        "receipts": 1,
+        "max_attempts_per_call": 1,
+        "synthetic_faults": 0,
+        "tool_ms": 0.856
+      },
+      {
+        "repetition": 3,
+        "task_id": "live_simple_86-47-0",
+        "fault": "timeout_once",
+        "seed": 17,
+        "task_success": true,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "none",
+        "blocked_calls": [],
+        "error": "",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "6a672ee5f2b6f1797988d6d1ded3eba3a01cb65350e79e97bb47c43d1c00bfc5",
+        "receipt_sha256": "8ccb42dc2f9683879016b511c781c3217c0944328bb6ed89764a5dac74afe959",
+        "semantic_hash": "ab0ec41b6b144325e7360aa9b65e362a9eb92ed1da40a5b1229f5449e8f92513",
+        "trace_hash": "cde8c7a0d9e32c0e34f5deeb546dbf5cb2a94de5f4745b427e9121b263ec88ea",
+        "receipts": 1,
+        "max_attempts_per_call": 2,
+        "synthetic_faults": 1,
+        "tool_ms": 0.875
+      },
+      {
+        "repetition": 3,
+        "task_id": "live_simple_86-47-0",
+        "fault": "always_timeout",
+        "seed": 17,
+        "task_success": false,
+        "schema_valid": true,
+        "safe": true,
+        "refusal": false,
+        "failure_class": "injected_failure",
+        "blocked_calls": [],
+        "error": "synthetic timeout exhausted retries",
+        "proposal": {
+          "calls": [
+            {
+              "name": "sort_array",
+              "arguments": {
+                "array": [
+                  1,
+                  54,
+                  3,
+                  1,
+                  76,
+                  2343,
+                  21
+                ],
+                "reverse": false
+              }
+            }
+          ],
+          "abstain": false,
+          "reason": "generic schema-based inference"
+        },
+        "proposal_sha256": "a6a82307d2fb39e3095ee533bc7690d61cbead8662dd1fe4d67b65a4b3634a29",
+        "outcome_sha256": "061c7f35c73edc1c89c9ae38e3b5b5eca5e718c9efb03599c75c4a13b1097222",
+        "receipt_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "semantic_hash": "2b921d42f73fb5de649526ab879e7e3a6e6a694fbe0125fa10cbc6c0c158e334",
+        "trace_hash": "e1d03d80d9d01c12535480a44125d6bfed37f108f7c636a3f6b8d74096abc29f",
+        "receipts": 0,
+        "max_attempts_per_call": 2,
+        "synthetic_faults": 2,
+        "tool_ms": 0.883
+      }
+    ]
+  },
+  "independent_validation": {
+    "distinct_task_fault_rejudgments": 28,
+    "all_recorded_row_hashes_and_outcomes_verified": true,
+    "split_counts_and_timing_statistics_recomputed": true
+  }
+}

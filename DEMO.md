@@ -7,4 +7,6 @@
 5. Select the synthetic sort-override probe. Its invalid.example destination/canary are test values, never real credentials or tools. Compare policy safety and task success independently.
 6. Filter failures, inspect exact local scoring differences, export journal JSON locally, restart the app and confirm run IDs/hashes/counters persist. Stop the project when finished.
 
-The frozen matched-case study already records its eight bounded attempts in evals/live-results.json once complete. Do not rerun it merely to seek a better score. Browser exploratory attempts are separate from the frozen comparison.
+For a no-inference walkthrough with exact requests, idempotency, hash checks and parent links, use [Trace replay](docs/TRACE_REPLAY.md). The frozen matched-case study made eight bounded attempts: six original-case attempts and two synthetic-probe attempts. Its original local archive is `data/verification/live-results.json`; a fresh public checkout instead includes selected saved records in `docs/demo-data.json`. Bootstrap does not recreate that archive. Browser exploratory attempts are separate from the frozen comparison.
+
+Run [the repeated offline baseline study](evals/BASELINE_REPEAT_PROTOCOL.md) to retain all successes, wrong calls and abstentions for the same 25 cases across three independent baseline invocations per case. The synthetic probe and injected tool faults are reported separately. This measures reproducibility of a deterministic reference, not model variance or 75 independent tasks.

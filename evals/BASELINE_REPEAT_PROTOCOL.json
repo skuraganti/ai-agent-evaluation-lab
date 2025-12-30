@@ -1,0 +1,223 @@
+{
+  "protocol_id": "tracelab-baseline-repeat-v1",
+  "frozen_at_utc": "2026-10-16T21:52:45Z",
+  "frozen_before_first_measurement": true,
+  "study_kind": "reproducibility of the unchanged deterministic baseline; not a model study",
+  "evaluation_protocol": "tracelab-exact-v1",
+  "source": {
+    "repository": "https://github.com/ShishirPatil/gorilla",
+    "commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "manifest_sha256": "21e0c83b3ed56cf087740142bbf7da238d3143dbc7459f496115fdde5b1436ce",
+    "raw_files_sha256": {
+      "BFCL_v4_live_parallel.json": "6c26e9fdc3350cf596e6d1ea9c179cbff834761bccf562f4141ed29a839ca421",
+      "BFCL_v4_live_relevance.json": "e03f9e241657a137cba48a89ee12f47bf3fcb7e4f6274263e9c699a0c974203a",
+      "BFCL_v4_live_simple.json": "1af2ac87dca47556db7b7e37e51e28b459a38b594e3c7b3c792b4903598ca0c4",
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "README.md": "93119d83df28fee0a9f3ea41b0c6a947aad9f7ba4334ae89fef41c74b67b208d",
+      "answers-BFCL_v4_live_parallel.json": "8a9f189ff0e832ebbbbdade1fd95a7dbcc67406e9177df3f0aad76f59ab00350",
+      "answers-BFCL_v4_live_simple.json": "fec9cfa9744a936f9126981e85a2023da1e63e273eafebc81923a1162fad70ce"
+    },
+    "tasks_sha256": "24f2fcf16fa75f6a9296e02d1cf394f2a0029b7ad62b487e23152a410fe40cfb",
+    "reference_sha256": "4061ffac0ee6946cefd3d19fa6c31a8be776b9c027ecd5ec07286be0c7ee1e37"
+  },
+  "code_sha256": {
+    "app/catalog.py": "9582cfc709e58a9a14c0dd9f8c523b5cae106e85303558b8d21f21e0f5ecf6be",
+    "app/evaluator.py": "877b72ecef2bd8910ff851ff155865a4fbd7a0edfd8dc478cbfccbce6c2e229d"
+  },
+  "original_tasks": [
+    {
+      "id": "live_simple_86-47-0",
+      "split": "development",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_102-61-0",
+      "split": "development",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_103-61-1",
+      "split": "development",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_104-61-2",
+      "split": "development",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_115-71-0",
+      "split": "development",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_4-3-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_5-3-1",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_6-3-2",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_7-3-3",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_39-16-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_77-38-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_85-46-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_90-51-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_98-58-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_118-74-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_120-76-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_192-116-0",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_193-116-1",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_194-116-2",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_simple_195-116-3",
+      "split": "held_out",
+      "category": "simple"
+    },
+    {
+      "id": "live_parallel_1-0-1",
+      "split": "held_out",
+      "category": "parallel"
+    },
+    {
+      "id": "live_parallel_5-2-0",
+      "split": "held_out",
+      "category": "parallel"
+    },
+    {
+      "id": "live_parallel_6-3-0",
+      "split": "held_out",
+      "category": "parallel"
+    },
+    {
+      "id": "live_parallel_7-3-1",
+      "split": "held_out",
+      "category": "parallel"
+    },
+    {
+      "id": "live_parallel_13-9-0",
+      "split": "held_out",
+      "category": "parallel"
+    }
+  ],
+  "split_counts": {
+    "development": 5,
+    "held_out": 20
+  },
+  "probe": {
+    "id": "probe-sort-override",
+    "split": "synthetic_probe",
+    "reported_separately": true
+  },
+  "policy": "baseline",
+  "fault": "none",
+  "seed": 17,
+  "repetitions": {
+    "default": 3,
+    "min": 1,
+    "max": 5
+  },
+  "fault_experiment": {
+    "task_id": "live_simple_86-47-0",
+    "seed": 17,
+    "faults": [
+      "none",
+      "timeout_once",
+      "always_timeout"
+    ],
+    "max_attempts_per_call": 2,
+    "note": "synchronous local simulation; no real outage or waiting"
+  },
+  "evaluations_per_repetition": {
+    "originals": 25,
+    "probe": 1,
+    "fault": 3,
+    "total": 29
+  },
+  "max_total_evaluations": 145,
+  "output": {
+    "directory": "data/verification/baseline-repeat",
+    "exclusive_create": true
+  },
+  "compared_hashes": [
+    "proposal_sha256",
+    "outcome_sha256",
+    "receipt_sha256",
+    "semantic_hash"
+  ],
+  "not_compared": [
+    "trace_hash",
+    "event timestamps",
+    "tool_ms"
+  ],
+  "metrics": [
+    "task_success",
+    "schema_valid",
+    "safe",
+    "refusal",
+    "failure_class counts",
+    "blocked_calls",
+    "per-case stability across repetitions",
+    "tool_ms min/median/max (local only)"
+  ],
+  "model_calls": 0,
+  "cost_usd": null,
+  "limits": [
+    "25 fixed previously observed cases repeated R times are not 25*R independent tasks",
+    "deterministic offline baseline: stability evidences reproducibility only, not model variance",
+    "tool_ms is local simulated validation/judging time, not real API latency",
+    "references stay inside the local judge and never enter baseline inputs"
+  ]
+}

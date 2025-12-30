@@ -6,11 +6,11 @@ Reproducible BFCL-derived tool-planning comparisons, immutable traces, local ref
 
 ## Two ways to explore
 
-The **Pages site** is a self-contained browser demonstration with relative assets and no backend, credentials or model calls. Its data modes are visibly labeled: original public-publisher snapshots/recorded observations where allowed, explicit simulation where appropriate, and an entirely synthetic Ledger fixture. The repository also contains the **full Python/Docker application**; Pages cannot execute its backend or background workers.
+The **Pages site** is a self-contained browser demonstration with relative assets and no backend, credentials or model calls. It shows selected historical BFCL-derived tasks, saved model observations and explicitly simulated tool receipts; it does not provide live weather or execute tools. The repository also contains the **full Python/Docker application**; Pages cannot execute its backend or background workers.
 
 ## Run the full application locally
 
-Requirements: Python3.13+, [uv](https://docs.astral.sh/uv/), Docker and Docker Compose. Contour also needs Node24+ for the trusted official TypeScript parser when running native tests; its Docker image includes Node. No GPU is required. Run one portfolio stack at a time on a small machine.
+Requirements: Python 3.13+, [uv](https://docs.astral.sh/uv/), Docker and Docker Compose. No GPU is required. Run one portfolio stack at a time on a small machine.
 
 ```sh
 uv sync --frozen
@@ -31,6 +31,10 @@ python3 -m http.server 8008 --bind 127.0.0.1 --directory docs
 ```
 
 The final command previews Pages at http://127.0.0.1:8008. Bootstrap prepares this checkout's own data before data-boundary integration tests. Unit fixtures, actual-source checks, captured evaluations and browser simulations are distinguished in [VERIFICATION.md](VERIFICATION.md). No model call is required for the native test suite.
+
+## Repeated offline baselines and replay
+
+[Run the bounded reproducibility study](evals/BASELINE_REPEAT_PROTOCOL.md) to compare separately generated baseline proposals, outcomes, simulated receipts and semantic hashes across three repetitions of the same 25 original cases. The [replay walkthrough](docs/TRACE_REPLAY.md) follows an immutable saved proposal through parent-linked replay, failure inspection and restart checks. [Recorded results](examples/baseline-repeat-v1.json): the baseline retained 3/25 successes, 20 refusals and 2 wrong-call outcomes in every repetition. These checks make no model requests and are separate from the saved eight-attempt model study.
 
 ## Scope and limitations
 
